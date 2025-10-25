@@ -1,6 +1,7 @@
 import AboutMe from "@/components/hero/AboutMe";
 import HeroBanner from "@/components/hero/HeroBanner";
 import NavBar from "@/components/hero/NavBar";
+import Quote from "@/components/hero/Quote";
 
 export default function LandingPage() {
     return (
@@ -9,6 +10,7 @@ export default function LandingPage() {
                 <NavBar />
                 <HeroBanner />
                 <AboutMe />
+                <Quote />
             </div>
         </div>
     )
