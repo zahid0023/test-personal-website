@@ -1,27 +1,23 @@
-import aboutmeImage from '../../assets/iu-about-me.png';
+import aboutMeImage from '../../assets/iu-about-me.png';
 
 export default function AboutMe() {
     return (
-        <div className="flex justify-center mb-22">
-            <div className="text-white w-[1200px]">
-                {/* Section Title */}
-                <h1 className="text-3xl text-[#008080] md:text-3xl font-bold mb-12 text-center md:text-left">
-                    ABOUT ME
-                </h1>
-
-                {/* Content */}
-                <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
-                    {/* Image */}
-                    <img
-                        src={aboutmeImage}
-                        alt="About Me"
-                        className="w-[300px] h-[300px] object-cover rounded-2xl border-2 border-white"
-                    />
-
-                    {/* Text */}
-                    <p className="font-semibold text-xl md:text-2xl lg:text-3xl leading-relaxed md:leading-snug text-center md:text-left">
-                        WELCOME TO THE CREATIVE WORLD OF IU, A SPECIALIST BOLD ARTIST WITH A PASSION FOR
-                        INNOVATION AND STORYTELLING, WITH YEARS OF EXPERIENCE IN ARTS.
+        <div className="text-white">
+            <h1 className="text-amber-900 font-bold text-[.86rem] px-[.4rem] mt-4">ABOUT ME</h1>
+            <div className="grid grid-cols-4 bg-black text-white px-[.4rem] mt-[.7rem]">
+                <div className="aspect-square col-start-1">
+                    <img src={aboutMeImage} alt="Banner Image 1" className="rounded-2xl w-full h-full object-cover" />
+                </div>
+                <div className="col-start-2 col-end-5 flex flex-col px-[.4rem] py-[.7rem] text-[.45rem]  gap-3">
+                    <p className="">
+                        WELCOME TO THE CREATIVE WORLD OF NOATH BENNET, A SPECIALIST BOLD
+                        ARTIST WITH A PASSION FOR INNOVATION AND STORY TELLING. WITH YEARS OF
+                        EXPERIENCE IN DESIGNS.
+                    </p>
+                    <p>
+                        MY MISSION IS TO BRING IDEAS TO LIFE THROUGH CAPTIVATING VISUALS
+                        THAT RESONATE WITH AUDIENCES. LET'S COLLABORATE AND CREATE SOMETHING
+                        EXTRAORDINARY TOGETHER.
                     </p>
                 </div>
             </div>
