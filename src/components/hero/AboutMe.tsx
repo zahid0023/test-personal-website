@@ -1,4 +1,4 @@
-import aboutMeImage from '../../assets/iu-about-me.png';
+import aboutMeImage from '../../assets/nahin-about-me.jpg';
 import "./AboutMe.css"
 
 export default function AboutMe() {

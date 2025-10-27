@@ -1,9 +1,32 @@
-import bannerImage1 from "../../assets/banner-image-1.jpeg";
-import bannerImage2 from "../../assets/banner-image-2.jpeg";
+import React from "react";
+import bannerImage1 from "../../assets/nahin-banner-1.jpg";
+import bannerImage2 from "../../assets/nahin-banner-2.jpg";
 import { Button } from "../ui/button";
-import "./HeroBanner.css"
+import "./HeroBanner.css";
 
-export default function HeroBanner() {
+const HeroBanner: React.FC = () => {
+    const text1 = "HEY, I AM NAHIN";
+    const text2 = "BOLD ARTIST";
+    const text3 = "Specialist";
+
+    // Function to render letters with animation delay
+    const renderAnimatedText = (text: string, className: string, delayOffset: number = 0) => {
+        return text.split("").map((char, index) => (
+            <span
+                key={index}
+                className={`fade-letter ${className}`}
+                style={{ animationDelay: `${delayOffset + index * 0.08}s` }}
+            >
+                {char === " " ? "\u00A0" : char}
+            </span>
+        ));
+    };
+
+    // Calculate sequential delay offsets
+    const delay1 = 0;
+    const delay2 = text1.length * 0.08 + 0.5;
+    const delay3 = delay2 + text2.length * 0.08 + 0.5;
+
     return (
         <div className="grid grid-cols-4 grid-rows-2 bg-black text-white px-[.4rem]">
             <div className="aspect-square row-start-1 col-start-1">
@@ -18,11 +41,11 @@ export default function HeroBanner() {
             <div className="col-start-1 col-end-5 row-start-1 row-end-2 flex justify-center items-end w-full">
                 <div className="flex flex-col items-center justify-end">
                     <div className="flex flex-col justify-center items-center">
-                        <p className="text-1">HEY, I AM IU</p>
-                        <p className="hero-text-2 font-bold leading-none">BOLD ARTIST</p>
+                        <p className="hero-text-1">{renderAnimatedText(text1, "hero-text-1", delay1)}</p>
+                        <p className="hero-text-2 font-bold leading-none">{renderAnimatedText(text2, "hero-text-2", delay2)}</p>
                     </div>
                     <div>
-                        <p className="vollkorn text-3 italic leading-none">Specialist</p>
+                        <p className="vollkorn hero-text-3 italic leading-none">{renderAnimatedText(text3, "hero-text-3", delay3)}</p>
                     </div>
                 </div>
             </div>
@@ -32,8 +55,15 @@ export default function HeroBanner() {
                     PASSIONATE ABOUT BOLD, INNOVATIVE ACTING. I COMBINE CREATIVITY AND STRATEGY
                     TO CRAFT VISUAL EXPERIENCE THAT RESONATE AS A SPECIALIST
                 </p>
-                <Button variant={"default"} className="bg-amber-900 font-light text-[.4rem] rounded-none rounded-tl-[3px] rounded-br-[3px] py-[5px] h-auto">GET STARTED</Button>
+                <Button
+                    variant={"default"}
+                    className="bg-amber-900 font-light text-[.4rem] rounded-none rounded-tl-[3px] rounded-br-[3px] py-[5px] h-auto"
+                >
+                    GET STARTED
+                </Button>
             </div>
         </div>
     );
-}
+};
+
+export default HeroBanner;
