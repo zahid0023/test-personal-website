@@ -4,7 +4,7 @@ import "./AboutMe.css"
 export default function AboutMe() {
     return (
         <div className="text-white">
-            <h1 className="text-amber-900 font-bold text-1 px-[.4rem] mt-4">ABOUT ME</h1>
+            <h1 className="text-amber-900 font-bold text-1 px-[.4rem]">ABOUT ME</h1>
             <div className="grid grid-cols-4 bg-black text-white px-[.4rem] mt-[.7rem]">
                 <div className="aspect-square col-start-1">
                     <img src={aboutMeImage} alt="Banner Image 1" className="rounded-2xl w-full h-full object-cover" />

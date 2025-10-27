@@ -3,7 +3,7 @@ import "./Quote.css"
 
 export default function Quote() {
     return (
-        <div className="grid grid-cols-3 text-white mt-4">
+        <div className="grid grid-cols-3 text-white">
             <div className="col-start-1 col-end-4 row-start-1 row-end-2">
                 <img src={quoteImage} alt="Quote Image" />
             </div>
