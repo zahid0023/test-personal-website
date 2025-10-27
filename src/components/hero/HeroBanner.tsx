@@ -19,7 +19,7 @@ export default function HeroBanner() {
                 <div className="flex flex-col items-center justify-end">
                     <div className="flex flex-col justify-center items-center">
                         <p className="text-1">HEY, I AM IU</p>
-                        <p className="text-2 font-bold leading-none">BOLD ARTIST</p>
+                        <p className="hero-text-2 font-bold leading-none">BOLD ARTIST</p>
                     </div>
                     <div>
                         <p className="vollkorn text-3 italic leading-none">Specialist</p>
